@@ -17,3 +17,25 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &w,int &x,int &y,int &z){
+
+   int Money[] = {50 , 100 , 500 , 1000};
+
+   for(int i = 10 ; i > 0  ; i--){
+       int j = rand()%4;
+       int k = rand()%4;
+       int t = Money[k];
+       Money[k] = Money[j];
+       Money[j] = t;
+    
+     if(i == 1){
+        w = Money[0];
+        x = Money[1];
+        y = Money[2];
+        z = Money[3];
+      } 
+   }
+
+}
+ 
